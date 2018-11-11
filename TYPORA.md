@@ -80,7 +80,7 @@ N级有序列表 [tab..n]1.
 
 - [x] 喝酒
 
-- [ ] 汤头
+- [ ] 烫头
 
 ## 表格
 
@@ -165,22 +165,6 @@ __加粗__
 
 __加粗__
 
-### 高亮
-
-```markdown
-==高亮==
-```
-
-==高亮==
-
-### 下划线
-
-```markdown
-<u>下划线</u>
-```
-
-<u>下划线</u>
-
 ### 删除线
 
 ```markdown
@@ -195,29 +179,7 @@ __加粗__
 ---
 ```
 
----
-
-### 注脚
-
-```markdown
-Markdown[^[1]]
-```
-
-Markdown[^ 1]
-
-### 上下标
-
-```markdown
-$3^2=9$
-$3^{(3-1)}=9$
-$H_2SO_4$
-$H_{2SO_4}$
-```
-
-$3^2=9$
-$3^{(3-1)}=9$
-$H_2SO_4$
-$H_{2SO_4}$
+------
 
 ### 符号输入
 
@@ -238,7 +200,7 @@ $H_{2SO_4}$
 
 ### 特殊字符
 
-[特殊字符编码对照表]: https://www.jb51.net/onlineread/htmlchar.htm
+[特殊字符编码对照表](https://www.jb51.net/onlineread/htmlchar.htm)
 
 # 附加内容
 
@@ -249,15 +211,12 @@ $H_{2SO_4}$
 字体加粗 command + b
 字体斜体 command + i
 字体变化 command + 数字
-字体下划 command + u
 附加链接 command + k
 选中一行 command + l
 选中单词 command + d
 全局搜索 command + f
 增加缩进 command + ]
 减少缩进 command + [
-添加脚注 command + option + r
-链接引用 command + option + l
 有序列表 command + option + o
 无序列表 command + option + u
 任务列表 command + option + x
@@ -267,12 +226,7 @@ $H_{2SO_4}$
 创建表格 command + option + t
 插入图片 command + control + i 
 添加分割 command + shift + -
-文本高亮 command + shift + h
 大纲视图 command + control + 1
 目录视图 command + control + 3
 ```
-
-
-
-[^ 1]: 一种轻量级的标记语言,允许使用易读易写的纯文本格式编写文档,然后转换成有效的HTML文档.
 
