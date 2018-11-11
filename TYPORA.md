@@ -4,14 +4,6 @@
 
 # 基本操作
 
-## 内容目录
-
-```markdown
-[toc]
-```
-
-[TOC]
-
 ## 标题
 
 ```markdown
@@ -98,7 +90,7 @@ N级有序列表 [tab..n]1.
 |李满满|男|1991-08-29|
 ```
 
-| 姓名   | 性别 | 生日       |
+| 姓名   | 性别 | 出生年月   |
 | :----- | :--- | :--------- |
 | 李满满 | 男   | 1991-08-29 |
 
@@ -121,19 +113,16 @@ N级有序列表 [tab..n]1.
 qrcode/zbios_efde696.png)
 ```
 
-![https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png](../../Desktop/zbios_efde696.png)
+![zbios_efde696](https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png)
 
 ### 超链接
 
 ```markdown
-行内式链接 [百度][https://www.baidu.com/]
-参考式链接 [百度]:https://www.baidu.com/
+行内式链接 [百度](https://www.baidu.com/)
 自动式链接 <http://www.baidu.com>
 ```
 
-[百度][https://www.baidu.com/]
-
-[百度]:https://www.baidu.com/
+[百度](https://www.baidu.com/)
 
 <http://www.baidu.com>
 
@@ -150,32 +139,6 @@ qrcode/zbios_efde696.png)
 
 ```python
 print "Hello Word!"
-```
-
-## 图表
-
-### 自由流程图
-
-```flow
-st=>start: Start
-op=>operation: Operation
-cond=>condition: Condition
-sub1=>subroutine: Subroutine
-io=>inputoutput: Inputoutput
-e=>end: End
-st->op->cond
-cond(yes)->io->e
-cond(no)->sub1(right)->op
-```
-
-### 自由时序图
-
-```sequence
-Title: Here is a title
-A->B: Normal line
-B-->C: Dashed line
-C->>D: Open arrow
-D-->>A: Dashed open arrow
 ```
 
 ## 其它
