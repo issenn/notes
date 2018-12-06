@@ -48,7 +48,7 @@
 
 * 使用多租户FTP
 * 使用对象存储OSS
-* 重写DjangoStrage
+* 重写DjangoStorage
 
 # 实验环境
 
