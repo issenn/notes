@@ -486,7 +486,7 @@ nginx -t
 # 重新加载配置文件
 systemctl reload nginx
 # 测试访问
-curl https://locate.netease.com:8443/vsftpd/
+curl https://www.example.com:8443/vsftpd/
 ```
 
 * 添加如上server配置段到您的配置文件,然后重新加载配置即可.
