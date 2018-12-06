@@ -25,6 +25,8 @@
   * [USER2权限测试](#USER2权限测试)
   * [USER3权限测试](#USER3权限测试)
 
+* 配合HTTPS访问
+
 ---
 
 # 需求整理
@@ -448,4 +450,44 @@ local: /etc/passwd remote: passwd
 ftp> delete passwd
 550 Permission denied.
 ```
+
+# 配置HTTPS访问
+
+> vim /etc/nginx/nginx.conf
+
+```
+server {
+    charset              utf-8;
+    listen               8443 ssl;
+    server_name          www.example.com;
+    server_tokens        off;
+    root                 /usr/share/nginx/html;
+    ssl_certificate      /workspace/apps/nginx/certs/www.example.com.pem;
+    ssl_certificate_key  /workspace/apps/nginx/certs/www.example.com.key;
+    ssl_session_cache    shared:SSL:1m;
+    ssl_session_timeout  5m;
+    ssl_ciphers          ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols        TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers  on;
+
+    location /vsftpd {
+        alias /workspace/apps/vsftpd/;
+        autoindex            on;
+        autoindex_exact_size off;
+        autoindex_localtime  on;
+        index index.htm index.html;
+    }
+}
+```
+
+```bash
+# 检查配置文件是否正确
+nginx -t
+# 重新加载配置文件
+systemctl reload nginx
+# 测试访问
+curl https://locate.netease.com:8443/vsftpd/
+```
+
+* 添加如上server配置段到您的配置文件,然后重新加载配置即可.
 
